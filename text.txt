@@ -1,0 +1,14 @@
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+make[1]: 'include/generated/mach-types.h' is up to date.
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      drivers/gpu/msm/kgsl_iommu.o
+  CHK     kernel/config_data.h
+drivers/gpu/msm/kgsl_iommu.c: In function 'kgsl_iommu_clk_disable_event':
+drivers/gpu/msm/kgsl_iommu.c:212:4: warning: passing argument 4 of 'kgsl_add_event' from incompatible pointer type [enabled by default]
+error, forbidden warning: kgsl_iommu.c:212
+scripts/Makefile.build:307: recipe for target 'drivers/gpu/msm/kgsl_iommu.o' failed
+scripts/Makefile.build:443: recipe for target 'drivers/gpu/msm' failed
+scripts/Makefile.build:443: recipe for target 'drivers/gpu' failed
+Makefile:951: recipe for target 'drivers' failed
